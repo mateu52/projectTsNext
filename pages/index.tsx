@@ -1,9 +1,15 @@
-import React from "react"
+// pages/index.tsx
+import React from 'react';
+import InputForm from '../components/InputForm';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div>
-      <h1>Next JS..!</h1>
+      <h1>Input Form</h1>
+      <InputForm />
     </div>
-  )
-}
+  );
+};
+
+export default Home;
+
