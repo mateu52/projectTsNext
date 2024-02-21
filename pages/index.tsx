@@ -4,8 +4,8 @@ import InputForm from '../components/InputForm';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Input Form</h1>
+    <div className='px-6 pb-4 ml-4 bg-blue-50 w-80'>
+      <h1 className="">Input Form</h1>
       <InputForm />
     </div>
   );
