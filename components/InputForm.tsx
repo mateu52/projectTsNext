@@ -1,9 +1,12 @@
 // components/InputForm.tsx
 import React, { useState } from 'react';
 
-const InputForm: React.FC = () => {
+interface InputFormProps {
+  setDisplayName: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const InputForm: React.FC<InputFormProps> = ({setDisplayName}) => {
   const [inputData, setInputData] = useState<string>('');
-  const [ displayName, setDisplayName] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputData(e.target.value);

@@ -1,12 +1,15 @@
 // pages/index.tsx
-import React from 'react';
+import React, { useState} from 'react';
 import InputForm from '../components/InputForm';
+import DisplayData from './displayData';
 
 const Home: React.FC = () => {
+  const [ displayName, setDisplayName] = useState(false);
   return (
     <div className='px-6 pb-4 ml-4 bg-blue-50 w-80'>
       <h1 className="">Witaj! Podaj imię:</h1>
-      <InputForm />
+      <InputForm  setDisplayName ={setDisplayName} />
+      {displayName ? <DisplayData /> : null}
     </div>
   );
 };
