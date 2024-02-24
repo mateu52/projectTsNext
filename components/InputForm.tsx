@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 const InputForm: React.FC = () => {
   const [inputData, setInputData] = useState<string>('');
+  const [ displayName, setDisplayName] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputData(e.target.value);
@@ -22,6 +23,7 @@ const InputForm: React.FC = () => {
 
       // Clear input after submission
       setInputData('');
+      setDisplayName(true);
     } catch (error) {
       console.error('Error saving data:', error);
     }
@@ -30,7 +32,7 @@ const InputForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={inputData} onChange={handleInputChange} />
-      <button type="submit">Save</button>
+      <button type="submit">Ok</button>
     </form>
   );
 };

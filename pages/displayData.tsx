@@ -17,7 +17,7 @@ const DisplayData: React.FC = () => {
 
         fetchData();
     }, []);
-
+    console.log(data);
     return (
         <div>
         <h1>Display Data</h1>
