@@ -19,9 +19,9 @@ const DisplayData: React.FC = () => {
     }, []);
     console.log(data);
     return (
-        <div>
-        <h1>Display Data</h1>
-        <p>{data}</p>
+        <div className='bg-red-100 rounded ml-4 mt-5 w-1/3'>
+        <h1 className='bg-indigo-100 rounded'>Witaj</h1>
+        <p className='bg-indigo-300 font-semibold tracking-wide'>{data}</p>
         </div>
     );
 };

@@ -6,7 +6,7 @@ import DisplayData from './displayData';
 const Home: React.FC = () => {
   const [ displayName, setDisplayName] = useState(false);
   return (
-    <div className='px-6 pb-4 ml-4 bg-blue-50 w-80'>
+    <div className='px-6 pb-4 ml-4 bg-blue-50 w-1/2 min-h-screen'>
       <h1 className="">Witaj! Podaj imię:</h1>
       <InputForm  setDisplayName ={setDisplayName} />
       {displayName ? <DisplayData /> : null}

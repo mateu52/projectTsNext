@@ -35,7 +35,7 @@ const InputForm: React.FC<InputFormProps> = ({setDisplayName}) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={inputData} onChange={handleInputChange} />
-      <button type="submit">Ok</button>
+      <button type="submit" className='hover:italic hover:tracking-widest'>Ok</button>
     </form>
   );
 };
