@@ -4,11 +4,13 @@ import path from 'path';
 // Komponent strony, który odbiera dane jako props
 export default function DataList({ data }) {
     return (
-        <div>
-        <h1>List of Submitted Data</h1>
-        <ul>
+        <div className='bg-blue-50'>
+        <h1 className='text-2xl pt-4 ml-6'>List of comments:</h1>
+        <ul className='px-8 py-2'>
             {data.map((item, index) => (
-            <li key={index}>{item.author} - {item.title}</li>
+            <li key={index} className='py-1'>
+                {item.author} - {item.title}
+            </li>
             ))}
         </ul>
         </div>
